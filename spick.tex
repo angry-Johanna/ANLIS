@@ -176,6 +176,22 @@
     >{\centering\arraybackslash}X 
     >{\centering\arraybackslash}X  }
     \begin{math}
+        \frac{a}{b} + \frac{c}{d} = \frac{ad}{bd} + \frac{cb}{bd} = \frac{ab+cb}{bd}
+    \end{math}
+    &
+    \begin{math}
+        \frac{a}{b} - \frac{c}{d} = \frac{ad}{bd} - \frac{cb}{bd} = \frac{ab-cb}{bd}
+    \end{math}
+    \\ [7pt]
+    \begin{math}
+        \frac{a}{b} \times \frac{c}{d} = \frac{ac}{bd}
+    \end{math}
+    &
+    \begin{math}
+       \frac{\frac{a}{b}}{\frac{c}{d}} = \frac{a}{b} \times \frac{d}{c}
+    \end{math}
+    \\ [7pt]
+    \begin{math}
         \frac{1}{x} = x^{-1}
     \end{math}
     &
@@ -227,19 +243,19 @@
     >{\centering\arraybackslash}X 
     >{\centering\arraybackslash}X  }
     \begin{math}
-        \log_{b}(xy) = \log_{b}(x) + \log_{b}(y)
+        y = log_a(x) <=> x = a^y
     \end{math}
     &
     \begin{math}
-        \log_{b}(\frac{x}{y}) = \log_{b}(x) - \log_{b}(y)
+        \log_{b}(xy) = \log_{b}(x) + \log_{b}(y)
     \end{math}
     \\ [7pt]
     \begin{math}
-        \log_{b}(x^y) = y \log_{b}(x)
+        \log_{b}(\frac{x}{y}) = \log_{b}(x) - \log_{b}(y)
     \end{math}
     &
     \begin{math}
-        {}
+        \log_{b}(x^y) = y \log_{b}(x)
     \end{math}
     \\ [7pt]
     \begin{math}
@@ -307,8 +323,36 @@ Dann:
 % FUNKTIONEN %
 %            %
 %%%%%%%%%%%%%%
-\chapter{Funktionen}
 
+\chapter{Funktionen}
+\section{Lineare Funktion}
+\[f(x)=ax+b\]
+a = Steigung
+
+\section{Polynomfunktion}
+Grad der Funktion: Höchster Exponent von x. \\
+Nullstellen: Maximal so viele wie der Grad der Funktion. 
+\[f(x)=ax^n+bx^{n-1}+cx^{n-2}...\]
+
+\section{Quadratische Funktionen}
+Polynomfunktion zweites Grades
+\[f(x)=ax^2+bx+c\]
+
+\section{Exponentialfunktion}
+\[f(x)=a \times b^x\]
+
+
+\section{Logarithmusfunktion}
+Umkehrfunktion von Exponentialfunktion
+\[f(x)=log_b(x)\]
+
+
+%%%%%%%%%%%%%%%%%%%%%
+%                   %
+% FOLGEN UND REIHEN %
+%                   %
+%%%%%%%%%%%%%%%%%%%%%
+\chapter{Folgen und Reihen}
 \section{Geometrische Folgen und Reihen}
 \section{Arithmetische Folgen und Reihen}
 
