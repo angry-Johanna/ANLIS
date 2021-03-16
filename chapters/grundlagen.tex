@@ -1,56 +1,6 @@
-\documentclass{report}
-\usepackage{tabularx}
-
-\title{ANLIS - Spick}
-\author{Johanna Koch}
-\date{ }
-
+\documentclass[../main.tex]{subfiles}
 
 \begin{document}
-
-\maketitle
-\tableofcontents
-
-
-\iffalse
-\begin{tabular}{ |c| }
-    \hline
-    \begin{math}
-        \sqrt{x} =  x^\frac{1}{2}
-    \end{math}
-    \\
-    \hline
-    \begin{math}
-        \sqrt[3]{x} = x^\frac{1}{3}
-    \end{math}
-    \\
-    \hline
-\end{tabular}
-\fi
-
-\iffalse
-\begin{tabularx}{1\textwidth} { 
-    >{\centering\arraybackslash}X 
-    >{\centering\arraybackslash}X  }
-    \begin{math}
-        {}
-    \end{math}
-    &
-    \begin{math}
-        {}
-    \end{math}
-    \\ [7pt]
-    \begin{math}
-        {}
-    \end{math}
-    &
-    \begin{math}
-        {}
-    \end{math}
-    \\ [7pt]
-\end{tabularx}
-\fi
-
 %%%%%%%%%%%%%%
 %            %
 % GRUNDLAGEN %
@@ -316,46 +266,6 @@ Dann:
     \end{math}
     \\ [7pt]
 \end{tabularx}
-
-
-%%%%%%%%%%%%%%
-%            %
-% FUNKTIONEN %
-%            %
-%%%%%%%%%%%%%%
-
-\chapter{Funktionen}
-\section{Lineare Funktion}
-\[f(x)=ax+b\]
-a = Steigung
-
-\section{Polynomfunktion}
-Grad der Funktion: Höchster Exponent von x. \\
-Nullstellen: Maximal so viele wie der Grad der Funktion. 
-\[f(x)=ax^n+bx^{n-1}+cx^{n-2}...\]
-
-\section{Quadratische Funktionen}
-Polynomfunktion zweites Grades
-\[f(x)=ax^2+bx+c\]
-
-\section{Exponentialfunktion}
-\[f(x)=a \times b^x\]
-
-
-\section{Logarithmusfunktion}
-Umkehrfunktion von Exponentialfunktion
-\[f(x)=log_b(x)\]
-
-
-%%%%%%%%%%%%%%%%%%%%%
-%                   %
-% FOLGEN UND REIHEN %
-%                   %
-%%%%%%%%%%%%%%%%%%%%%
-\chapter{Folgen und Reihen}
-\section{Geometrische Folgen und Reihen}
-\section{Arithmetische Folgen und Reihen}
-
 
 
 \end{document}
