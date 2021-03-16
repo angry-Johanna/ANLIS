@@ -7,8 +7,94 @@
 %                   %
 %%%%%%%%%%%%%%%%%%%%%
 \chapter{Folgen und Reihen}
-\section{Geometrische Folgen und Reihen}
 \section{Arithmetische Folgen und Reihen}
+
+$(a_n) = a_1,a_2,a_3,...,a_n,...$
+
+\begin{flushleft}
+Differenz d zweier beliebiger aufeinanderfolgender Glieder $a_n,a_{n+1}$ ist konstant.
+\end{flushleft}
+
+Eine AF ist eindeutig beschrieben durch zwei Grössen:
+\begin{itemize}
+    \item beliebiges Glied $a_n$ und Differenz $d$
+    \item zwei beliebige Glieder $a_n$ und $a_{n+k}$
+\end{itemize}
+
+\begin{flushleft}
+\textbf{Bildungsgesetz}: Funktionsvorschrift nach welcher aus $n$ das $n$-Glied ($a_n$) berechnet werden kann.
+\end{flushleft}
+
+\subsection{Beispiele von Folgen}
+$(a_n) = -\frac{1}{2},-\frac{1}{4},-\frac{1}{8},...$ Bildungsgesetz: $a_n=-\frac{1}{2n}$ \\ [7pt]
+$(a_n) = 1^3,2^3,3^3,...$ Bildungsgesetz: $a_n=n^3$ \\ [7pt]
+$(a_n) = 0,\frac{1}{2},\frac{2}{3},\frac{3}{4},...$ Bildungsgesetz: $a_n=\frac{n-1}{n}$
+
+\subsection{Summe der Glieder einer AF}
+\begin{math}
+    \sum\limits_{k=1}^n a_k = na_1 + d \frac{n(n-1)}{2} = n \frac{a_1 + a_n}{2}
+\end{math} \\ [7pt]
+Wobei bei "$n \frac{a_1 + a_n}{2}$" $a_1$ das erste Glied ist, $a_n$ das letzte, $n$ die Anzahl Glieder und $2$ den Mittelwert vom ersten und letzten Glied bildet.
+
+\subsection{Nützliche andere Formeln}
+
+\begin{tabularx}{1\textwidth} { 
+    >{\centering\arraybackslash}X 
+    >{\centering\arraybackslash}X  }
+    Gegeben: $a_n = v$, $a_{n+x} = z$
+    &
+    Gesucht $d$: $d = \frac{z - v}{(n+x) -n}$
+    \\ [7pt]
+    \begin{math}
+        {}
+    \end{math}
+    &
+    \begin{math}
+        {}
+    \end{math}
+    \\ [7pt]
+\end{tabularx}
+
+
+\section{Geometrische Folgen und Reihen}
+\begin{flushleft}
+    Die geometrische Folge ist dadurch charakterisiert, dass der Quotient q zweier beliebiger aufeinanderfolgender Glieder $a_n$ und $a_{n+1}$ konstant ist.
+\end{flushleft}
+
+\begin{tabularx}{0.8\textwidth} { 
+    >{\centering\arraybackslash}X 
+    >{\centering\arraybackslash}X  }
+    \begin{math}
+        a_{n+1} = qa_n, n=1,2
+    \end{math}
+    &
+    \begin{math}
+        q = \frac{a_{n+1}}{a_n}
+    \end{math}
+    \\ [7pt]
+\end{tabularx}
+
+Eine GF ist eindeutig beschrieben durch zwei Grössen, entweder:
+\begin{itemize}
+    \item durch ein beliebiges Glied $a_n$ und den Quotienten $q$
+    \item durch zwei beliebige Glieder $a_n$ und $a_{n+k}$
+\end{itemize}
+
+\section{Rechnen mit Folgen, Eigenschaften}
+\begin{itemize}
+    \item Folge $(a_n)$ multipliziert man mit einer reellen Zahl $\lambda$, indem man jedes Glied der Folge mit dieser Zahl multipliziert: \\ [7pt]
+    $\lambda(a_n) = (\lambda a_n)$
+    \item Zwei Folgen $(a_n)$ und $(b_n)$ addiert man, indem man entsprechende Glieder addiert: \\ [7pt]
+    $(a_n)+(b_n) = (a_n + b_n)$
+    \item Eine Folge heisst \textbf{
+        konstante Folge}, falls $a_n = c \in \mathbb{R}, \forall n \in \mathbb{N}$ \\
+    AF ist konstant wenn $d=0$, \\
+    GF ist konstant wenn $q=1$
+    \item Eine Folge $(a_n)$ ist \textbf{streng monoton zunehmend/abnehmend} falls $(a_{n+1} > a_n)$ bzw $(a_{n+1} < a_n)$
+    \item Eine Folge $(a_n)$ ist \textbf{beschränkt} (höhö) falls eine positive Zahl $c$ existiert mit $|a_n|\leq c, \forall n$: alle Glieder der Folge liegen im Graphen unter einem Teppich der Breite $2c$. Anderfalls heisst die Folge $(a_n)$ \textbf{unbeschränkt}
+\end{itemize}
+
+
 
 
 \end{document}

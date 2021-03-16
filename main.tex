@@ -1,5 +1,6 @@
 \documentclass{report}
 \usepackage{tabularx}
+\usepackage{mathtools ,amssymb ,amsthm} % imports  amsmath
 \usepackage{subfiles} % Best loaded last in the preamble
 
 \title{ANLIS - Spick}
@@ -19,3 +20,26 @@
 \subfile{chapters/folgen_und_reihen}
 
 \end{document}
+
+\iffalse
+\begin{tabularx}{0.8\textwidth} { 
+    >{\centering\arraybackslash}X 
+    >{\centering\arraybackslash}X  }
+    \begin{math}
+        {}
+    \end{math}
+    &
+    \begin{math}
+        {}
+    \end{math}
+    \\ [7pt]
+    \begin{math}
+        {}
+    \end{math}
+    &
+    \begin{math}
+        {}
+    \end{math}
+    \\ [7pt]
+\end{tabularx}
+\fi
