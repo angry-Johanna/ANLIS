@@ -5,3 +5,4 @@ chapters/*.pdf
 *.fls
 *.synctex.gz
 *.toc
+*.out
