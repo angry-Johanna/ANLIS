@@ -1,0 +1,73 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                        %
+% Differentialrechnung II -- Kettenregel %
+%                                        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Differentialrechnung II | Kettenregel}
+\section{Einseitige Ableitung}
+Strebt $\Delta x$ in der Definition der Ableitung von der positiven Seite gegen Null erhält man die \textbf{rechtsseitige Ableitung von der f an der Stelle $x_0$}: \\ [7pt]
+$f'(x_0^+) = \lim\limits_{\Delta x \to 0^+} \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x}$ (analog für die linksseitige Ableitung)
+
+\section{Kettenregel}
+Auch kombinierbar mit anderen Regeln: \\ [7pt]
+$(f(g(x)))' = f'(g(x)) \times g'(x)$
+
+\section{Umkehrfunktion}
+Durch die Abbildung f wird der Punkt x auf f(x) abgebildet. Die Umkehrabbildung $f^{-1}$ bildet diesen Punkt wieder auf x ab, dh. es gilt $f(f^{-1}(x)) = Id(x) = x$ (die identische Abbildung Id bildet x auf x ab.) \\ [7pt]
+Leite $f(f^{-1}(x)) = x$ nach x ab. \\ [7pt]
+$[f^{-1}(x)]' = \frac{1}{f'(f^{-1}(x))}$
+
+\section{Ableitung Logarithmus}
+$(ln(x))' = \frac{1}{x}$ \\ [7pt]
+$(a \times ln(x))' = \frac{a}{x}$
+
+\section{Ableitung Wurzel}
+$(\sqrt[n]{x^m})' = (x^{\frac{m}{n}})' = \frac{m}{n}x^{\frac{m}{n}-1}$
+
+\section{Ableitungen Arkusfunktionen}
+\begin{tabularx}{0.8\textwidth} { 
+    >{\centering\arraybackslash}X 
+    >{\centering\arraybackslash}X  }
+    \hline
+    f(x) & f'(x) \\ [7pt]
+    \hline \\
+    $\sin x$ & $\cos x$
+    \\ [7pt]
+    $\cos x$ & $-\sin x$
+    \\ [7pt]
+    $\tan x$ & $\frac{1}{\cos ^2x} = 1 + tan ^2 x$
+    \\ [7pt]
+    $\arcsin x$ & $\frac{1}{\sqrt{1 - x2}}$ * 
+    \\ [7pt]
+    $\arccos x$ & $-\frac{1}{\sqrt{1 - x2}}$
+    \\ [7pt]
+    $\arctan x$ & $\frac{1}{1 + x^2}$ 
+\end{tabularx} \\ [7pt]
+* falls $x \in (-1,1)$
+
+\section{Ableitungen Areafunktionen}
+\begin{tabularx}{0.8\textwidth} { 
+    >{\centering\arraybackslash}X 
+    >{\centering\arraybackslash}X  }
+    \hline
+    f(x) & f'(x) \\ [7pt]
+    \hline \\
+    $\sinh x$ & $\cosh x$
+    \\ [7pt]
+    $\cosh x$ & $\sinh x$
+    \\ [7pt]
+    $\tanh x$ & $\frac{1}{\cosh ^2x} = 1 + tanh ^2 x$
+    \\ [7pt]
+    $\operatorname{arsinh} x$ & $\frac{1}{\sqrt{1 + x2}}$
+    \\ [7pt]
+    $\operatorname{arcosh} x$ & $\frac{1}{\sqrt{1 - x2}}$
+    \\ [7pt]
+    $\operatorname{artanh} x$ & $\frac{1}{1 - x^2}$ 
+\end{tabularx}
+
+
+\end{document}
