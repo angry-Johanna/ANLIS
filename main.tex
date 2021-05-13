@@ -6,6 +6,8 @@
 \usepackage{nameref}
 \usepackage{hyperref}
 \usepackage{amsmath}
+\usepackage{tgbonum}
+\usepackage[table]{xcolor}
 \usepackage{subfiles} % Best loaded last in the preamble
 
 \title{ANLIS - Spick}
@@ -13,31 +15,34 @@
 \date{ }
 
 \begin{document}
+{\fontfamily{lmss}\selectfont
 
-\maketitle
-\tableofcontents
+    \maketitle
+    \tableofcontents
 
 
-\subfile{chapters/grundlagen}
+    \subfile{chapters/grundlagen}
 
-\subfile{chapters/funktionen}
+    \subfile{chapters/funktionen}
 
-\subfile{chapters/folgen_und_reihen}
+    \subfile{chapters/folgen_und_reihen}
 
-\subfile{chapters/grenzwerte_und_stetigkeit}
+    \subfile{chapters/grenzwerte_und_stetigkeit}
 
-\subfile{chapters/differentialrechnung_01}
+    \subfile{chapters/differentialrechnung_01}
 
-\subfile{chapters/differentialrechnung_02}
+    \subfile{chapters/differentialrechnung_02}
 
-\subfile{chapters/differentialrechnung_03}
+    \subfile{chapters/differentialrechnung_03}
 
-\subfile{chapters/differentialrechnung_04}
+    \subfile{chapters/differentialrechnung_04}
 
-\subfile{chapters/integralrechnung_01}
+    \subfile{chapters/integralrechnung_01}
 
-\subfile{chapters/integralrechnung_02}
+    \subfile{chapters/integralrechnung_02}
 
+    \subfile{chapters/integralrechnung_03}
+}
 \end{document}
 
 \iffalse
