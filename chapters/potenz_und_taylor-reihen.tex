@@ -1,0 +1,178 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                           %
+% Potenz- und Taylor-Reihen %
+%                           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{SW12 Potenz- und Taylor-Reihen}
+\section{Potenzreihe - Definition}
+Eine Potenzreihe in Potenzen von $(x-x_0)$ ist eine Reihe der Form \\
+$\sum\limits_{k=0}^\infty a_k(x-x_0)^k = a_0+a_1(x-x_0)$
+$+a_2(x-x_0)^2+a_3(x-x_0)^3+...$ \\ [7pt]
+Hier sind die $a_k(k=0,1,...)$ die Koeffizienten, $x_0$ der Entwicklungspunkt und 
+$x$ die Variable der Potenzreihe.
+
+\subsection{Theorem - Konvergenzradius}
+Für jede Potenzreihe \\ [7pt]
+$\sum\limits_{k=0}^\infty a_k(x-x_0)^k = a_0+a_1(x-x_0)$
+$+a_2(x-x_0)^2+a_3(x-x_0)^3+...$ \\ [7pt]
+gibt es eine reelle $R\geq 0$, genannt Konvergenzradius, sodass die Potenzreihe konvergiert,
+falls $|x-x_0|<R$, und divergiert, falls $|x-x_0|>R$ (für $|x-x_0|=R$ kann die Reihe entweder
+konvergieren oder divergieren). Dabei gilt: \\ [7pt]
+$R=\lim\limits_{k\to\infty}|\frac{a_k}{a_{k+1}}|$, bzw. $R=(\lim\limits_{k\to\infty}\sqrt[k]{|a_k|})^{-1}$ \\ [7pt]
+falls einer oder beide dieser Grenzwerte existiert.
+
+\subsubsection{Beispiel}
+Berechne den Konvergenzradius der Potenzreihe \\
+$\sum\limits_{k=0}^\infty \frac{x^k}{3^k} = 1+\frac{x}{3}+\frac{x^2}{3^2}+... $ \\ [7pt]
+$\sum\limits_{k=0}^\infty \frac{x^k}{3^k} = \sum\limits_{k=0}^\infty \frac{1}{3^k}(x-x_0)^k$ \\ [7pt]
+wobei: $a_k = \frac{1}{3^k}$,$x_0=0$ \\ [7pt]
+$R=\lim\limits_{k\to\infty}|\frac{a_k}{a_{k+1}}|$
+$=\lim\limits_{k\to\infty}|\frac{\frac{1}{3^k}}{\frac{1}{3^{k+1}}}|$
+$=\lim\limits_{k\to\infty}|\frac{1}{3^k}\frac{3^{k+1}}{1}|$
+$=\lim\limits_{k\to\infty}|3|=3$ \\ [7pt]
+$R=(\lim\limits_{k\to\infty}\sqrt[k]{|a_k|})^{-1} = \frac{1}{R} = \lim\limits_{k\to\infty}\sqrt[k]{|a_k|}$
+$ = \lim\limits_{k\to\infty}\sqrt[k]{|\frac{1}{3^k}|} = \lim\limits_{k\to\infty} \frac{1}{3}$ \\
+$ = \frac{1}{R} = \frac{1}{3} \longrightarrow R = 3$ \\ [7pt]
+Konvergenzradius $=3$
+
+\section{Definition Taylor-Polynom}
+Wir nehmen an, dass die Funktion $f:[a,b]\to\mathbb{R},x\mapsto f(x)$ genügend oft stetig
+differenzierbar ist. Dann ist das Taylor-Polynom n-ten Grades von $f$ an der Stelle $x_0$ definiert durch: \\ [7pt]
+$T_n(x)=\sum\limits_{k=0}^n\frac{f^{(k)}(x_0)}{k!}(x-x_0)^k$ \\ [7pt]
+$=f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x_0)}{2!}(x-x_0)^2+\frac{f'''(x_0)}{3!}(x-x_0)^3+... $\\
+Ist $x=0$, nennt man $T_n(x)$ auch Maclaurin-Polynom n-ten Grades von $f$. \\
+$a_k = \frac{f^{(k)}(x_0)}{k!}$
+
+\subsection{Beispiel 1}
+Bestimmen sie die Taylor-Polynome 2-ten und 3-ten Grades von $f(x)=e^x$ an der Stelle
+$x_0=0$ (auch Maclaurin-Polynome genannt). \\
+\begin{tabularx}{0.8\textwidth} { 
+    >{\centering\arraybackslash}X
+    >{\centering\arraybackslash}X 
+    >{\centering\arraybackslash}X  }
+    $k$ & $f^k(x)$ & $f^k(x_0)$
+    \\ [7pt]
+    \hline
+    $0$ & $e^x$ & $1$
+    \\ [7pt]
+    $1$ & $e^x$ & $1$
+    \\ [7pt]
+    $2$ & $e^x$ & $1$
+    \\ [7pt]
+    $3$ & $e^x$ & $1$
+    \\ [7pt]
+\end{tabularx}
+\\
+$T_n(x)=\sum\limits_{k=0}^n\frac{f^{(k)}(x_0)}{k!}(x-x_0)^k$ \\ [7pt]
+$= \sum\limits_{k=0}^n\frac{1}{k!}(x-0)^k = \sum\limits_{k=0}^n\frac{x^k}{k!}$
+$= \frac{1}{0!}+\frac{x^1}{1!}+\frac{x^2}{2!}+...+\frac{x^n}{n!}$
+
+\subsection{Beispiel 2}
+Bestimmen sie die Taylor-Polynome 2-ten und 3-ten Grades von $f(x)=x^3+2x^2-x+3$;$x_0=0$ \\
+\begin{tabularx}{0.8\textwidth} { 
+    >{\centering\arraybackslash}X
+    >{\centering\arraybackslash}X 
+    >{\centering\arraybackslash}X  }
+    $k$ & $f^k(x)$ & $f^k(x_0)$
+    \\ [7pt]
+    \hline
+    $0$ & $x^3+2x^2-x+3$ & $3$
+    \\ [7pt]
+    $1$ & $3x^2+4x-1$ & $-1$
+    \\ [7pt]
+    $2$ & $6x+4$ & $4$
+    \\ [7pt]
+    $3$ & $6$ & $6$
+    \\ [7pt]
+    $4$ & $0$ & $0$
+    \\ [7pt]
+\end{tabularx}
+\\
+$T_0(x)=f^{(0)}(x_0)=3$ \\ [7pt]
+$T_1(x)=f^{(1)}(x_0)(x-x_0)+f^{(0)}(x_0)=3-(x-0)=3-x$ \\ [7pt]
+$T_2(x)=T_1(x)+\frac{f^{(2)(x_0)}}{2!} = 3-x+\frac{4}{2}(x-x_0)^2=3-x+2x^2$ \\ [7pt]
+$T_3(x)=3-x+2x^2+x^3 = f(x)$
+
+
+\section{Definition - Taylor-Reihe}
+Wir nehmen an, die Funktion $f:[a,b]\to\mathbb{R},x\mapsto f(x)$ sei beliebig oft differenzierbar.
+Dann ist die Taylor-Reihe von $f$ an der Stelle $x_0$ definiert durch: \\ [7pt]
+$T(x)=\sum\limits_{k=0}^\infty\frac{f^{(k)}(x_0)}{k!}(x-x_0)^k$
+$=f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x_0)}{2!}(x-x_0)^2+\frac{f'''(x_0)}{3!}(x-x_0)^3+... $ \\ [7pt]
+Ist $x_0=0$, dann nennt man $T(x)$ auch Maclaurin-Reihe von $f$. \\
+Die ersten zwei Terme ergeben die lineare Approximation der Funktion $f$ an der Stelle $x_0$ bzw $0$.
+
+\section{Definition - Restglied nach Lagrange}
+Die Frage ist, ob die Taylor-Reihe einer Funktion wirklich gleich der Funktion ist. 
+Kann man also schreiben $T(x)=f(x)$? \\
+Die Antwort liefert das Restglied nach Lagrange: Es ist gleich dem Fehler, den wir machen,
+wenn wir die Funktion $f$ durch das n-te Taylor-Polynom ersetzten.
+\noindent\rule{8cm}{0.4pt} \\
+Falls die Funktion $f:[a,b]\to\mathbb{R},x\mapsto f(x)$ mindestens $(n+1)$-mal stetig
+differenzierbar ist, dann gilt: \\ [7pt]
+$f(x)=\sum\limits_{k=0}^n\frac{f^{(k)}(x_0)}{k!}(x-x_0)^k+R_n(x)$ \\ [7pt]
+wobei das Restglied nach Lagrange gegeben ist durch: \\ [7pt]
+$R_n(x)=\frac{f^{n+1)}(c)}{(n+1)!}(x-x_0)^{n+1}$ mit $c$ zwischen $x$ und $x_0$
+
+
+\subsection{Theorem - Konvergenz von Taylor-Reihen}
+Die Taylor-Reihe von $f$ an der Stelle $x_0$ konvergiert in ihrem Konvergenzbereich genau
+dann gegen $f(x)$ wenn das n. Restglied nach Lagrange: \\ [7pt]
+$R_n(x)=f(x)-\sum\limits_{k=0}^n\frac{f^{(k)}(x_0)}{k!}(x-x_0)^k$ für $n\to\infty$ gegen $0$ konvergiert.\\[7pt]
+Wir schreiben dann: \\[7pt]
+$f(x)=\sum\limits_{k=0}^n\frac{f^{(k)}(x_0)}{k!}(x-x_0)^k$
+\noindent\rule{8cm}{0.4pt} \\
+Eine beliebig oft differenzierbare Funktion von $f$ lässt sich in einer Umgebung $(x_0-R,x_0+R)$
+von $x_0$ in eine konvergente Taylor-Reihe entwickeln, falls gilt: \\ [7pt]
+$|f^{(n)}(x)|\leq KM^n$ für alle $n\in\mathbb{N}$ und alle $x\in(x_0-R,x_0+R)$. \\ [7pt]
+Dabei dürfen die Konstanten $K$ und $M$ nicht von $n$ und $x$ abhängen.
+
+\section{Definition Binomial-Reihe}
+Binomial-Reihe: \\ [7pt]
+$(1+x)^\alpha=\sum\limits_{k=0}^\infty\begin{pmatrix}\alpha \\k\end{pmatrix}x^k$
+mit $\begin{pmatrix}\alpha \\k\end{pmatrix}$ 
+$=\frac{\alpha\cdot(\alpha-1)\cdot\cdot\cdot(\alpha-k+1)}{k\cdot(k-1)\cdot\cdot\cdot 3\cdot 2\cdot 1}$ \\ [7pt]
+Ist definiert für $\alpha \in \mathbb{R}$ und $|x|<1$
+
+\subsection{Beispiel}
+Wie lautet die Binomial-Reihe von $\sqrt{1+x}$? Schreiben sie die ersten 3 Glieder auf. \\
+$\sqrt{1+x}=(1+x)^\frac{1}{2}=\sum\limits_{k=0}^\infty\begin{pmatrix}\frac{1}{2} \\k\end{pmatrix}x^k$ \\[7pt]
+$\sqrt{1+x}\approx$
+$\begin{pmatrix}\frac{1}{2} \\0\end{pmatrix}x^0+$
+$\begin{pmatrix}\frac{1}{2} \\1\end{pmatrix}x^1+$
+$\begin{pmatrix}\frac{1}{2} \\2\end{pmatrix}x^2$ \\ [7pt]
+$\begin{pmatrix}\frac{1}{2} \\0\end{pmatrix} = \frac{1}{1} = 1$ \\ [7pt]
+$\begin{pmatrix}\frac{1}{2} \\1\end{pmatrix}= \frac{\frac{1}{2}}{1} = \frac{1}{2}$ \\ [7pt]
+$\begin{pmatrix}\frac{1}{2} \\2\end{pmatrix} = \frac{\frac{1}{2}\cdot (\frac{1}{2}-2+1)}{2\cdot 1} = -\frac{1}{8}$ \\ [7pt]
+$\sqrt{1+x} = 1+\frac{1}{2}x-\frac{1}{8}x^2$
+
+\section{Rechnen mit Potenzreihen}
+\begin{itemize}
+    \item Potenzreihen lassen sich im Konvergenzbereich gliedweise addieren und subtrahieren.
+    \item Potenzreihen lassen sich im Konvergenzbereich gliedweise differenzieren und integrieren.
+\end{itemize}
+
+\subsection{Beispiel - addieren, subtrahieren}
+$e^x=\sum\limits_{k=0}^\infty\frac{x^k}{k!} = 1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\frac{x^4}{4!}+\frac{x^5}{5!}+...$ \\ [7pt]
+$e^{-x}=\sum\limits_{k=0}^\infty\frac{x^k}{k!} = 1-x+\frac{x^2}{2!}-\frac{x^3}{3!}+\frac{x^4}{4!}-\frac{x^5}{5!}+...$ \\ [7pt]
+$e^x+e^{-x}=2+2\cdot\frac{x^2}{2!}+2\cdot\frac{x^4}{4!}+...$ \\ [7pt]
+$e^x-e^{-x}=2x+2\cdot\frac{x^3}{3!}+2\cdot\frac{x^5}{5!}+...$
+
+\subsection{Beispiel - differenzieren, integrieren}
+Zeigen sie, dass man die Potenzreieh von $\sin x$ erhält, wenn man die Potenzreihe von $\cos x$
+gliedweise integriert. \\
+$\sin x = x -\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\frac{x^9}{9!}...$ \\ [7pt]
+$(\sin x)'=1-\frac{3x^2}{3!}+\frac{5x^4}{5!}-\frac{7x^6}{7!}+\frac{9x^8}{9!}...$ \\ [7pt]
+$=1-\frac{3x^2}{3\cdot 2!}+\frac{5x^4}{5\cdot 4!}-\frac{7x^6}{7\cdot 6!}+\frac{9x^8}{9\cdot 8!}...$
+$=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\frac{x^8}{8!}... = \cos x$
+
+
+
+
+
+
+
+\end{document}
