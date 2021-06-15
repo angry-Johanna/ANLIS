@@ -11,7 +11,7 @@
 Mehrzeilige Eingabe mit Enter. Shift-Enter um auszurechnen.
 
 \section{Grundlagen}
-\begin{tabularx}{0.8\textwidth} { 
+\begin{tabularx}{1.0\textwidth} { 
     >{\centering\arraybackslash}X 
     >{\centering\arraybackslash}X  }
     a+b,a-b,a*b,a/b & Addition, Subtraktion, Multiplikation, Division
@@ -36,11 +36,12 @@ Mehrzeilige Eingabe mit Enter. Shift-Enter um auszurechnen.
     \\ [7pt]
     \hline
     \%pi,\%e,\%i & Pi, Eulersche Zahl und imaginäre Einheit
-    \\ [7pt]
+    \\ [20pt]
 \end{tabularx}
+Alle Zahlen müssen explizit multipliziert werden, um also "2x" zu schreiben muss man "2*x" eingeben.
 
 \subsection{Einfache Operationen}
-\begin{tabularx}{0.8\textwidth} { 
+\begin{tabularx}{1.0\textwidth} { 
     >{\centering\arraybackslash}X 
     >{\centering\arraybackslash}X  }
     a:b & Zuweisung; der Wert von b wird dem Symbol a zugewiesen.
@@ -78,7 +79,7 @@ Mehrzeilige Eingabe mit Enter. Shift-Enter um auszurechnen.
 \end{tabularx}
 
 \section{Systemvariablen}
-\begin{tabularx}{0.8\textwidth} { 
+\begin{tabularx}{1.0\textwidth} { 
     >{\centering\arraybackslash}X 
     >{\centering\arraybackslash}X  }
     fpprintprec & Anzahl der signifikanten Stellen bei der Ausgabe vonGleitkommazahlen
@@ -92,7 +93,7 @@ Mehrzeilige Eingabe mit Enter. Shift-Enter um auszurechnen.
 \end{tabularx}
 
 \section{Logische Ausdrücke}
-\begin{tabularx}{0.8\textwidth} { 
+\begin{tabularx}{1.0\textwidth} { 
     >{\centering\arraybackslash}X 
     >{\centering\arraybackslash}X  }
     true,false & Logische Konstantenwahrundfalsch
@@ -113,7 +114,7 @@ Mehrzeilige Eingabe mit Enter. Shift-Enter um auszurechnen.
 \end{tabularx}
 
 \section{Summen und Grenzwerte}
-\begin{tabularx}{0.8\textwidth} { 
+\begin{tabularx}{1.0\textwidth} { 
     >{\centering\arraybackslash}X 
     >{\centering\arraybackslash}X  }
     inf,minf & Symbole für unendlich und negativ unendlich
@@ -135,7 +136,7 @@ Mehrzeilige Eingabe mit Enter. Shift-Enter um auszurechnen.
 
 
 \section{Differenzieren und Integrieren}
-\begin{tabularx}{0.8\textwidth} { 
+\begin{tabularx}{1.0\textwidth} { 
     >{\centering\arraybackslash}X 
     >{\centering\arraybackslash}X  }
     diff(expr,x[,n]) & n-te Ableitung des Ausdrucks expr nach der Variablen x; die Angabe von n ist optional, Default: 1.
@@ -145,12 +146,12 @@ Mehrzeilige Eingabe mit Enter. Shift-Enter um auszurechnen.
     \\ [7pt]
     \hline
     integrate(expr,x,x0,x1) & Bestimmtes Integral des Ausdrucks expr mit der Integrationsvariablen x zwischen den Grenzen x0 und x1
-    \\ [7pt]
-    \hline
+    \\ [20pt]
 \end{tabularx}
+Für partielle int/diff: diff(f(x,y),x)
 
 \section{Gleichungen}
-\begin{tabularx}{0.8\textwidth} { 
+\begin{tabularx}{1.0\textwidth} { 
     >{\centering\arraybackslash}X 
     >{\centering\arraybackslash}X  }
     solve(eqn,var) & Lösen der algebraischen Gleichung eqn nach der Variablen var
@@ -174,7 +175,7 @@ Mehrzeilige Eingabe mit Enter. Shift-Enter um auszurechnen.
 f(x1,x2,. . .):=expr
 
 \iffalse
-\begin{tabularx}{0.8\textwidth} { 
+\begin{tabularx}{1.0\textwidth} { 
     >{\centering\arraybackslash}X 
     >{\centering\arraybackslash}X  }
     &
