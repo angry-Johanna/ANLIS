@@ -8,7 +8,7 @@
 %%%%%%%%%%%%%%%%%%%%%
 \chapter{SW02 Folgen und Reihen}
 \section{Arithmetische Folgen und Reihen}
-
+$a_n=a_1+(n-1)\cdot d$ \\
 $(a_n) = a_1,a_2,a_3,...,a_n,...$
 
 \begin{flushleft}
@@ -30,10 +30,8 @@ $(a_n) = -\frac{1}{2},-\frac{1}{4},-\frac{1}{8},...$ Bildungsgesetz: $a_n=-\frac
 $(a_n) = 1^3,2^3,3^3,...$ Bildungsgesetz: $a_n=n^3$ \\ [7pt]
 $(a_n) = 0,\frac{1}{2},\frac{2}{3},\frac{3}{4},...$ Bildungsgesetz: $a_n=\frac{n-1}{n}$
 
-\subsection{Summe der Glieder einer AF}
-\begin{math}
-    \sum\limits_{k=1}^n a_k = na_1 + d \frac{n(n-1)}{2} = n \frac{a_1 + a_n}{2}
-\end{math} \\ [7pt]
+\subsection{Summe der Glieder einer AF: Arithmetische Reihe}
+$\sum\limits_{k=1}^n a_k = na_1 + d \frac{n(n-1)}{2} = n \frac{a_1 + a_n}{2}$\\ [7pt]
 Wobei bei "$n \frac{a_1 + a_n}{2}$" $a_1$ das erste Glied ist, $a_n$ das letzte, $n$ die Anzahl Glieder und $2$ den Mittelwert vom ersten und letzten Glied bildet.
 
 \subsection{Nützliche andere Formeln}
@@ -56,7 +54,8 @@ Wobei bei "$n \frac{a_1 + a_n}{2}$" $a_1$ das erste Glied ist, $a_n$ das letzte,
 \end{tabularx}
 
 
-\section{Geometrische Folgen und Reihen}
+\section{Geometrische Folgen}
+$a_n=a_1\cdot q^{n-1}$
 \begin{flushleft}
     Die geometrische Folge ist dadurch charakterisiert, dass der Quotient q zweier beliebiger aufeinanderfolgender Glieder $a_n$ und $a_{n+1}$ konstant ist.
 \end{flushleft}
@@ -80,6 +79,9 @@ Eine GF ist eindeutig beschrieben durch zwei Grössen, entweder:
     \item durch zwei beliebige Glieder $a_n$ und $a_{n+k}$
 \end{itemize}
 
+\section{Geometrische Reihe}
+$S_n=\sum\limits_{i=1}^na_i=a_1\cdot\frac{q^n-1}{q-1}$
+
 \section{Rechnen mit Folgen, Eigenschaften}
 \begin{itemize}
     \item Folge $(a_n)$ multipliziert man mit einer reellen Zahl $\lambda$, indem man jedes Glied der Folge mit dieser Zahl multipliziert: \\ [7pt]
@@ -94,6 +96,26 @@ Eine GF ist eindeutig beschrieben durch zwei Grössen, entweder:
     \item Eine Folge $(a_n)$ ist \textbf{beschränkt} (höhö) falls eine positive Zahl $c$ existiert mit $|a_n|\leq c, \forall n$: alle Glieder der Folge liegen im Graphen unter einem Teppich der Breite $2c$. Anderfalls heisst die Folge $(a_n)$ \textbf{unbeschränkt}
 \end{itemize}
 
+
+\section{Folgen Eigenschaften}
+\subsection{Konvergenz/Divergenz}
+Folge ist \textbf{konvergent}, wenn sie einen Grenzwert besitzt. Folge ist \textbf{divergent}, wenn es keinen 
+Grenzwert gibt.
+
+\subsection{Explizite Folge}
+Beispiel: $(a_n)_n=(\frac{1}{n})_n$ \\
+$a_n$ für den Wert direkt erkennbar.
+
+\subsection{Rekursive Folge}
+Beispiel: $a_{n+1}=a_n+a_{n+1}$ \\
+$a_n$ ergibt sich aus den vorherigen Glieder der Rekursionsvorschrift.
+
+\subsection{Nullfolge}
+Folge konvergiert zum Grenzwert 0.
+
+\subsection{Alternierende Folge}
+Beinhaltet etwas in der Art $(-1)^n$. Fallunterscheidung machen für GW, weil wenn $n$ gerade, dann Folgenglied
+positiv, wenn $n$ ungerade, dann Folgenglied negativ.
 
 
 
